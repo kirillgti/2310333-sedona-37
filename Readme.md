@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Кирилл Третьяков](https://up.htmlacademy.ru/htmlcss/37/user/2310333).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Ветер](https://up.htmlacademy.ru/profession/frontender/17/htmlcss/37/user/73199).
 
 ---
 
