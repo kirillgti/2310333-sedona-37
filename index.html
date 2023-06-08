@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Туристический городок Sedona</title>
   </head>
+
   <body>
     <header class="main-header">
       <nav class="main-header-nav">
-        <img class="sedona-logo" src="" alt="логотип Sedona" />
+        <a class="sedona-logo-link" href="index.hml">
+          <img class="sedona-logo" width="140" height="70" src="images/header/logo_sedona.svg" alt="логотип Седона.">
+        </a>
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="nav-link nav-link-current" href="#">Главная</a>
+            <a class="nav-link nav-link-current" href="index.hml">Главная</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">О Седоне</a>
@@ -23,140 +27,134 @@
       </nav>
       <ul class="header-user-list">
         <li class="user-item">
-          <a class="user-link" href="#"
-            ><span class="visually-hidden">Поиск</span></a
-          >
+          <a class="user-link user-search" href="#"><span class="visually-hidden">Поиск.</span></a>
         </li>
         <li class="user-item">
-          <a class="user-link" href="#"
-            ><span class="visually-hidden">Понравилось</span></a
-          >
+          <a class="user-link user-favorite" href="#"><span class="visually-hidden">Избранное.</span></a>
         </li>
         <li class="user-item">
-          <a class="button" href="#">Хочу сюда</a>
+          <a class="button header-button" href="#">Хочу сюда</a>
         </li>
       </ul>
     </header>
     <main class="main-index">
       <section class="index-title-section">
         <h1 class="index-title visually-hidden">
-          Туристический городок Sedona
+          Туристический городок Sedona.
         </h1>
-        <img src="" alt="Горный каньон рядом с городком Седона" />
+        <img src="images/index/hero_text.svg" width="458" height="352"
+          alt="Welcome to the gorgeous Sedona. Because the Great Canyon sucks.">
       </section>
       <section class="about">
         <header class="section-header">
-          <h2 class="visually-hidden">Что такое Седона</h2>
-          <h3>Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
-          <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <h2 class="visually-hidden">Что такое Седона.</h2>
+          <h3 class="section-header-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
+          <p class="section-header-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </header>
         <ul class="about-list">
           <li class="about-item">
-            <h4>Настоящий городок</h4>
-            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="" alt="Деревянные дома в стилистике дикого Запада" />
+            <div class="about-wrapper about-text">
+              <h4 class="sedona-subtitle about-subtitle">Настоящий городок</h4>
+              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <img class="about-image" src="images/index/about_houses.jpg" width="800" height="385"
+              alt="Деревянные дома в стилистике дикого Запада.">
           </li>
-          <li class="about-item">
-            <h4>Небольшая площадь</h4>
+          <li class="about-item about-text">
+            <h4 class="sedona-subtitle about-subtitle">Небольшая площадь</h4>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="about-item">
-            <h4>Красивая дорога</h4>
+          <li class="about-item about-text">
+            <h4 class="sedona-subtitle about-subtitle">Красивая дорога</h4>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="about-item">
-            <h4>Мало туристов</h4>
+          <li class="about-item about-text">
+            <h4 class="sedona-subtitle about-subtitle">Мало туристов</h4>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="about-item">
-            <img src="" alt="Горные пейзажи, напоминающие Гранд Каньон" />
-            <h4>Там есть мост дьявола</h4>
-            <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <div class="about-wrapper about-text">
+              <h4 class="sedona-subtitle about-subtitle">Там есть мост дьявола</h4>
+              <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
+            <img class="about-image" src="images/index/about-canyon.jpg" width="800" height="385"
+              alt="Горные пейзажи, напоминающие Гранд Каньон.">
           </li>
         </ul>
       </section>
       <section class="recomendations">
         <header class="section-header">
           <h2 class="visually-hidden">
-            Рекомендации по посещению городка Седона
+            Рекомендации по посещению городка Седона.
           </h2>
-          <h3>Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
-          <p>Опытный персонал и качественное обслуживание!</p>
+          <h3 class="section-header-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
+          <p class="section-header-text">Опытный персонал и качественное обслуживание!</p>
         </header>
-        <ul class="recomendations-list">
-          <li class="recomendations-item">
-            <h4>Жильё</h4>
+        <ul class="recomendation-list">
+          <li class="recomendation-item">
+            <span class="visually-hidden recomendation-hotel">Иконка дома.</span>
+            <h4 class="sedona-subtitle recomendation-subtitle">Жильё</h4>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li class="recomendations-item">
-            <h4>Еда</h4>
-            <p>
-              Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
-            </p>
+          <li class="recomendation-item">
+            <span class="visually-hidden recomendation-food">Иконка бургера.</span>
+            <h4 class="sedona-subtitle recomendation-subtitle">Еда</h4>
+            <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="recomendations-item">
-            <h4>Сувениры</h4>
+          <li class="recomendation-item">
+            <span class="visually-hidden recomendation-souvenir">Иконка упакованного подарка.</span>
+            <h4 class="sedona-subtitle recomendation-subtitle">Сувениры</h4>
             <p>Не только китайского, но и настоящего местного производства!</p>
           </li>
         </ul>
       </section>
       <section class="booking">
         <header class="section-header">
-          <h2 class="visually-hidden">Бронирование гостиницы</h2>
-          <h3>Заинтересовались?</h3>
-          <p>
-            Укажите предполагаемые даты поездки,и мы покажем вам лучшие
-            предложения гостиниц в Седоне
-          </p>
+          <h2 class="visually-hidden">Бронирование гостиницы.</h2>
+          <h3 class="section-header-title">Заинтересовались?</h3>
+          <p class="section-header-text">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения
+            гостиниц в Седоне</p>
         </header>
-        <a href="#" class="button">Поиск гостиницы в Седоне</a>
+        <a href="#" class="button search-hotel-button">Поиск гостиницы в Седоне</a>
       </section>
-      <section class="mailing mailing-index">
+      <section class="subscribe subscribe-index">
         <header class="section-header">
-          <h2 class="visually-hidden">Подписка на рассылку новостей</h2>
-          <h3>Подпишитесь на рассылку</h3>
-          <p>
-            Только полезная информация и никакого спама, честное бойскаутское!
-          </p>
+          <h2 class="visually-hidden">Подписка на рассылку новостей.</h2>
+          <h3 class="section-header-title">Подпишитесь на рассылку</h3>
+          <p class="section-header-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         </header>
-        <form
-          class="mailing-form"
-          action="https://echo.htmlacademy.ru/"
-          method="post"
-        >
-          <input type="text" placeholder="Ваш e-mail" />
-          <input class="button submit-button" type="submit" />
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input type="text" placeholder="Ваш e-mail">
+          <input class="button subscribe-button" type="submit">
         </form>
       </section>
     </main>
     <footer class="footer">
       <ul class="social-list">
         <li class="social-item">
-          <a href="#">
-            <span class="visually-hidden">Вконтакте</span>
-            <img src="#" alt="Соцсеть Вконтакте" />
+          <a class="social-link social-vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Вконтакте.</span>
           </a>
         </li>
         <li class="social-item">
-          <a href="#">
-            <span class="visually-hidden">Телеграм</span>
-            <img src="#" alt="Мессенджер Телеграм" />
+          <a class="social-link social-telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Телеграм.</span>
           </a>
         </li>
         <li class="social-item">
-          <a href="#">
-            <span class="visually-hidden">Ютьюб</span>
-            <img src="#" alt="Видеосервис Ютьюб" />
+          <a class="social-link social-youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Ютьюб.</span>
           </a>
         </li>
         <a class="contact-tel" href="tel:88128121212">
-          <span class="visually-hidden">Телефон для связи</span>
+          <span class="visually-hidden">Телефон для связи.</span>
           +7 (812) 812-12-12
         </a>
-        <a class="academy-logo" href="#">
-          <img src="" alt="логотип HTML-академии" />
+        <a class="academy-logo" href="https://htmlacademy.ru/">
+          <img src="images/footer/logo_academy.svg" alt="логотип HTML-академии.">
         </a>
       </ul>
     </footer>
   </body>
+
 </html>
