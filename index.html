@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Туристический городок Sedona</title>
   </head>
 
@@ -21,7 +22,7 @@
             <a class="nav-link" href="#">О Седоне</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Гостиницы</a>
+            <a class="nav-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -49,32 +50,32 @@
         <header class="section-header">
           <h2 class="visually-hidden">Что такое Седона.</h2>
           <h3 class="section-header-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
-          <p class="section-header-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <p class="section-header-text sedona-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </header>
         <ul class="about-list">
           <li class="about-item">
-            <div class="about-wrapper about-text">
-              <h4 class="sedona-subtitle about-subtitle">Настоящий городок</h4>
+            <div class="about-wrapper about-block">
+              <h4 class="sedona-subtitle">Настоящий городок</h4>
               <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <img class="about-image" src="images/index/about_houses.jpg" width="800" height="385"
               alt="Деревянные дома в стилистике дикого Запада.">
           </li>
-          <li class="about-item about-text">
-            <h4 class="sedona-subtitle about-subtitle">Небольшая площадь</h4>
-            <p>Все достопримечательности находятся очень близко</p>
+          <li class="about-item about-block">
+            <h4 class="sedona-subtitle">Небольшая площадь</h4>
+            <p class="sedona-text">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="about-item about-text">
-            <h4 class="sedona-subtitle about-subtitle">Красивая дорога</h4>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <li class="about-item about-block">
+            <h4 class="sedona-subtitle">Красивая дорога</h4>
+            <p class="sedona-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="about-item about-text">
-            <h4 class="sedona-subtitle about-subtitle">Мало туристов</h4>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          <li class="about-item about-block">
+            <h4 class="sedona-subtitle">Мало туристов</h4>
+            <p class="sedona-text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="about-item">
-            <div class="about-wrapper about-text">
-              <h4 class="sedona-subtitle about-subtitle">Там есть мост дьявола</h4>
+            <div class="about-wrapper about-block">
+              <h4 class="sedona-subtitle">Там есть мост дьявола</h4>
               <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
             <img class="about-image" src="images/index/about-canyon.jpg" width="800" height="385"
@@ -88,23 +89,26 @@
             Рекомендации по посещению городка Седона.
           </h2>
           <h3 class="section-header-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
-          <p class="section-header-text">Опытный персонал и качественное обслуживание!</p>
+          <p class="section-header-text sedona-text">Опытный персонал и качественное обслуживание!</p>
         </header>
         <ul class="recomendation-list">
           <li class="recomendation-item">
-            <span class="visually-hidden recomendation-hotel">Иконка дома.</span>
+            <span class="visually-hidden">Иконка дома.</span>
+            <div class="recomendation-img recomendation-hotel"></div>
             <h4 class="sedona-subtitle recomendation-subtitle">Жильё</h4>
-            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <p class="sedona-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="recomendation-item">
-            <span class="visually-hidden recomendation-food">Иконка бургера.</span>
+            <span class="visually-hidden">Иконка бургера.</span>
+            <div class="recomendation-img recomendation-food"></div>
             <h4 class="sedona-subtitle recomendation-subtitle">Еда</h4>
-            <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <p class="sedona-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="recomendation-item">
-            <span class="visually-hidden recomendation-souvenir">Иконка упакованного подарка.</span>
+            <span class="visually-hidden">Иконка упакованного подарка.</span>
+            <div class="recomendation-img recomendation-souvenir"></div>
             <h4 class="sedona-subtitle recomendation-subtitle">Сувениры</h4>
-            <p>Не только китайского, но и настоящего местного производства!</p>
+            <p class="sedona-text">Не только китайского, но и настоящего местного производства!</p>
           </li>
         </ul>
       </section>
@@ -112,7 +116,8 @@
         <header class="section-header">
           <h2 class="visually-hidden">Бронирование гостиницы.</h2>
           <h3 class="section-header-title">Заинтересовались?</h3>
-          <p class="section-header-text">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения
+          <p class="section-header-text sedona-text">Укажите предполагаемые даты поездки,и мы покажем вам лучшие
+            предложения
             гостиниц в Седоне</p>
         </header>
         <a href="#" class="button search-hotel-button">Поиск гостиницы в Седоне</a>
@@ -121,7 +126,8 @@
         <header class="section-header">
           <h2 class="visually-hidden">Подписка на рассылку новостей.</h2>
           <h3 class="section-header-title">Подпишитесь на рассылку</h3>
-          <p class="section-header-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="section-header-text">Только полезная информация и никакого спама, честное бойскаутское!
+          </p>
         </header>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="text" placeholder="Ваш e-mail">

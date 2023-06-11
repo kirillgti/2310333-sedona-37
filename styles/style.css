@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
+  url("../fonts/PTSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+  url("../fonts/PTSans-Bold.woff") format("woff");
+}
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.button {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sedona-text {
+  color: #333333;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.nav-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.user-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.user-search {
+  background: url("../images/header/search.svg") no-repeat center;
+}
+
+.user-favorite {
+  background: url("../images/header/favorite.svg") no-repeat center;
+}
+
+.header-button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.section-header-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.section-header-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.sedona-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.about-wrapper {
+  background-color: #82B3D3;
+  color: #ffffff;
+}
+
+.recomendation-img {
+  width: 75px;
+  height: 76px;
+}
+
+.recomendation-hotel {
+  background: url("../images/index/living.svg") no-repeat center bottom;
+}
+
+.recomendation-food {
+  background: url("../images/index/food.svg") no-repeat center bottom;
+}
+
+.recomendation-souvenir {
+  background: url("../images/index/souvenir.svg") no-repeat center bottom;
+}
+
+.subscribe {
+  width: 1200px;
+  height: 414px;
+}
+
+.subscribe-index {
+  background: url("../images/index/subscribe.jpg") no-repeat center bottom;
+  color: #ffffff;
+}
+
+.social-link {
+  display: block;
+  width: 24px;
+  height: 17px;
+}
+
+.social-vkontakte {
+  background: url("../images/footer/social_vk.svg") no-repeat center bottom;
+}
+
+.social-telegram {
+  background: url("../images/footer/social_tg.svg") no-repeat center bottom;
+}
+
+.social-youtube {
+  background: url("../images/footer/social_yt.svg") no-repeat center bottom;
+}
+
+.contact-tel {
+  font-size: 40px;
+  line-height: 40px;
+}
