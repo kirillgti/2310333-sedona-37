@@ -243,6 +243,7 @@ body {
   background-color: #90959A;
   text-align: center;
   position: relative;
+  margin-bottom: 69px;
 }
 
 .hero::after {
@@ -261,6 +262,7 @@ body {
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
 }
 
 .section-header-text {
@@ -271,10 +273,32 @@ body {
 }
 
 .sedona-subtitle {
+  position: relative;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.about {
+  margin-bottom: 64px;
+}
+
+.about-item-inner .sedona-subtitle {
+  margin-bottom: 62px;
+}
+
+.about-subtitle-style::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -34px;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .sedona-text {
@@ -282,22 +306,61 @@ body {
   margin: 0;
 }
 
-.about-block {
-  background-color: #fff;
-  text-align: center;
+.about-list {
+  display: grid;
+  margin-top: 96px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.block-blue {
+.about-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 400px;
+  min-height: 385px;
+  background-color: #fff;
+  text-align: center;
+  padding: 85px;
+}
+
+.about-item-inner p {
+ margin: ;
+}
+
+.item-image-right {
+  grid-column: 2 / 4;
+}
+
+.item-image-left {
+  grid-column: 1 / 3;
+}
+
+.about-image {
+  display: block;
+}
+
+.item-blue { /*Заголовок наследует цвет родителя, а параграф нет - почему?*/
   background-color: #82B3D3;
   color: #ffffff;
 }
 
-.block-blue-low {
+.bitem-blue-low {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.block-blue-lowest {
+.item-blue-lowest {
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.item-blue > .about-item-inner > .sedona-subtitle::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.recomendation-list {
+  display: flex;
+  margin-top: 64px;
+  margin-bottom: 96px;
 }
 
 .recomendation-img {
@@ -306,7 +369,15 @@ body {
   height: 76px;
   background-position: center top;
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
+
+.about-item .recomendation-img,
+.recomendation-sedona-subtitle {
+  margin-bottom: 30px;
+}
+
+
 
 .recomendation-hotel {
   background-image: url("../images/index/living.svg");
@@ -320,10 +391,21 @@ body {
   background-image: url("../images/index/souvenir.svg") ;
 }
 
+.booking {
+  margin-bottom: 96px;
+}
+
 .search-hotel-button {
   width: 376px;
   font-size: 20px;
   line-height: 1.8;
+  margin: 0 auto;
+  margin-top: 54px;
+}
+
+.subscribe {
+  padding-top: 96px;
+  padding-bottom: 104px;
 }
 
 .subscribe-index {
@@ -339,6 +421,9 @@ body {
 
 .subscribe-form {
   display: flex;
+  width: 684px;
+  margin: 0 auto;
+  margin-top: 54px;
 }
 
 .subscribe-field {
@@ -847,10 +932,22 @@ body {
 
 /*=======================FOOTER*/
 
+.footer { /*не работает flex*/
+  padding-top: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .contact-tel,
 .academy-logo path,
 .social-link path {
   transition-duration: 0.5s;
+}
+
+.social-list {
+  display: flex;
 }
 
 .social-link {
