@@ -22,6 +22,10 @@
   url("../fonts/PTSans-Bold.woff") format("woff");
 }
 
+html,body {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
@@ -30,13 +34,21 @@ body {
   color: #000000;
   margin: 0;
   min-width: 1280px;
+  height: 100%;
 }
 
 .page-wrapper {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   width: 1200px;
+  min-height: 100%;
   background-color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  flex-grow: 1;
 }
 
 .section-padding {
@@ -51,6 +63,7 @@ body {
 }
 
 .button {
+  font-family: "PT Sans", "Arial", sans-serif;
   display: block;
   font-weight: 700;
   color: #ffffff;
@@ -62,14 +75,8 @@ body {
   background-color: #756157;
   padding: 8px;
   outline: none;
-  /*transition-duration: 0.5s;*/
+  transition: background-color 0.5s;
   cursor: pointer;
-}
-
-.button:hover,
-.button:focus,
-.button:active {
-  transition-duration: 0.5s;
 }
 
 .button-brown {
@@ -108,13 +115,18 @@ body {
 }
 
 .visually-hidden {
-  display: none;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
 }
 
 /*=======================HEADER*/
 
 .main-header {
-  max-height: 64px; /*сделано для того, чтобы логотип выступал на body*/
   display: flex;
   align-items: center;
 }
@@ -124,26 +136,31 @@ body {
   min-width: 508px;
 }
 
-.sedona-logo-link { /*как убрать лишние кликабельные зоны логотипа-ссылки?*/
+.sedona-logo-link {
+  display: block;
+  width: 140px;
+  position: relative;
   z-index: 2;
-  margin-right: 28px;
+  margin-right: 46px;
 }
 
 .sedona-logo {
   display: block;
+  position: absolute;
 }
 
 .nav-wrapper {
   display: flex;
-  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .nav-list {
   display: flex;
 }
 
-.nav-item {
-  padding: 20px 16px
+.nav-item:not(.nav-item:last-child) {
+  margin-right: 32px;
 }
 
 .nav-link {
@@ -162,11 +179,12 @@ body {
   content: "";
   position: absolute;
   left:0;
-  bottom: -21px;
+  bottom: -18px;
   transform: translateY(50%);
   width: 100%;
   height: 2px;
   background-color: #756257;
+
 }
 
 .user-wrapper {
@@ -179,31 +197,31 @@ body {
   align-items: center;
 }
 
-.user-item {
-  padding: 0 12px;
+.user-item:not(.user-item:last-child, .user-item:nth-last-child(2)) {
+  margin-right: 24px;
 }
 
-.user-list:last-child {
-  padding-right: 0;
+.user-item:nth-last-child(2) {
+  margin-right: 32px;
 }
 
 .user-link {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .user-search {
   background-image: url("../images/header/search.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
 }
 
 .user-favorite {
   position: relative;
   background-image: url("../images/header/favorite.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
 }
 
 .favorite-count {
@@ -263,6 +281,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .section-header-text {
@@ -281,8 +300,18 @@ body {
   margin: 0;
 }
 
+/*==========About*/
+
 .about {
   margin-bottom: 64px;
+}
+
+.about .section-header {
+  margin-bottom: 90px;
+}
+
+.about > .section-header .section-header-title {
+  margin-bottom: 25px;
 }
 
 .about-item-inner .sedona-subtitle {
@@ -308,11 +337,20 @@ body {
 
 .about-list {
   display: grid;
-  margin-top: 96px;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .about-item {
+  display: flex;
+}
+
+.about-item:first-child,
+.about-item:last-child {
+  grid-column: 1 / 4;
+}
+
+.about-item-inner,
+.recomendation-item-inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -321,46 +359,42 @@ body {
   min-height: 385px;
   background-color: #fff;
   text-align: center;
-  padding: 85px;
+  padding: 0 85px; /*или лучше регулировать текстовый блок параметром width?*/
 }
 
-.about-item-inner p {
- margin: ;
-}
-
-.item-image-right {
-  grid-column: 2 / 4;
-}
-
-.item-image-left {
-  grid-column: 1 / 3;
-}
-
-.about-image {
-  display: block;
-}
-
-.item-blue { /*Заголовок наследует цвет родителя, а параграф нет - почему?*/
+.inner-blue {
   background-color: #82B3D3;
   color: #ffffff;
 }
 
-.bitem-blue-low {
+.inner-blue .sedona-text {
+  color: #ffffff;
+}
+
+.inner-blue-low {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.item-blue-lowest {
+.inner-blue-lowest {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.item-blue > .about-item-inner > .sedona-subtitle::after {
+.inner-blue > .about-item-inner > .sedona-subtitle::after {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*==========Recomendations*/
+
+.recomendations {
+  margin-bottom: 96px;
+}
+
+.recomendations .section-header {
+  margin-bottom: 64px;
 }
 
 .recomendation-list {
   display: flex;
-  margin-top: 64px;
-  margin-bottom: 96px;
 }
 
 .recomendation-img {
@@ -370,14 +404,8 @@ body {
   background-position: center top;
   background-repeat: no-repeat;
   margin: 0 auto;
-}
-
-.about-item .recomendation-img,
-.recomendation-sedona-subtitle {
   margin-bottom: 30px;
 }
-
-
 
 .recomendation-hotel {
   background-image: url("../images/index/living.svg");
@@ -391,8 +419,18 @@ body {
   background-image: url("../images/index/souvenir.svg") ;
 }
 
+.recomendation-item-inner .sedona-subtitle {
+  margin-bottom: 30px;
+}
+
+/*==========Booking*/
+
 .booking {
   margin-bottom: 96px;
+}
+
+.booking .section-header {
+  margin-bottom: 54px;
 }
 
 .search-hotel-button {
@@ -400,8 +438,9 @@ body {
   font-size: 20px;
   line-height: 1.8;
   margin: 0 auto;
-  margin-top: 54px;
 }
+
+/*==========Subscribe*/
 
 .subscribe {
   padding-top: 96px;
@@ -614,18 +653,11 @@ body {
 
 .price {
   width: 143px;
-  padding: 12px 20px;
+  padding: 9px 20px;
   background-color: #F2F2F2;
   position: relative;
-}
-
-.price-min {
-  border-radius: 4px 0 0 4px;
-  margin-right: 2px;
-}
-
-.price-max {
-  border-radius: 0 4px 4px 0;
+  transition: background-color 0.5s;
+  border: 3px solid transparent;
 }
 
 .price-numbers {
@@ -637,6 +669,39 @@ body {
   border: none;
   outline: none;
   background-color: #F2F2F2;
+  transition: background-color 0.5s;
+}
+
+.price:hover,
+.price:hover .price-numbers {
+  background-color: #E6E6E6;
+}
+
+.price-numbers-min:focus .price-min { /*не работает*/
+  border-color: #83B3D3;
+}
+
+.price-numbers-max:focus .price-max { /*не работает*/
+  border-color: #83B3D3;
+}
+
+.price-min {
+  border-radius: 4px 0 0 4px;
+  margin-right: 2px;
+}
+
+.price-max {
+  border-radius: 0 4px 4px 0;
+}
+
+.price-numbers::-webkit-outer-spin-button,
+.price-numbers::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-numbers[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .price-text-max,
@@ -647,6 +712,50 @@ body {
   right: 20px;
   bottom: 50%;
   transform: translateY(50%);
+}
+
+.price-slider {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: #5E676D;
+}
+
+.price-slider-progress {
+  position: absolute;
+  right: 61px;
+  width: calc(100% - 61px);
+  height: 4px;
+  background-color: #fff;
+}
+
+.price-slider-input {
+  position: relative;
+}
+
+.price-slider-input input {
+  position: absolute;
+  top: -6px;
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  background: none;
+}
+
+.price-slider-input input::-webkit-slider-thumb { /*левый рычажлк не прижимается, хотя value=0*/
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.price-slider-input input::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #fff;
 }
 
 .filter-button {
@@ -665,6 +774,7 @@ body {
   padding: 5px;
   margin-bottom: 0;
   margin-top: 0;
+  transition: color 0.5s;
 }
 
 .filter-button-reset:hover {
@@ -717,7 +827,7 @@ body {
   pointer-events: none;
 }
 
-.result-text {
+.result-text-button {
   box-sizing: border-box;
   width: 290px;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -732,17 +842,17 @@ body {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  transition: border-color 0.5s;
+  background-color: #fff;
 }
 
-.result-text:hover,
-.result-text:focus {
+.result-text-button:hover,
+.result-text-button:focus {
   border-color: #68A2CA;
-  transition-duration: 0.5s;
 }
 
-.result-text:active {
+.result-text-button:active {
   border-color: #3F5E72;
-  transition-duration: 0.5s;
 }
 
 .result-buttons-container {
@@ -751,27 +861,23 @@ body {
 }
 
 .result-button {
-  padding: 15px 14px;
+  width: 48px;
+  height: 48px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  transition: border-color 0.5s;
+  background-repeat: no-repeat;
+  background-position: center center;
+  outline: none;
 }
 
 .result-button:hover,
 .result-button:active {
   border-color: #000;
-  transition-duration: 0.5s;
 }
 
-.result-button:focus { /*криво работает при наведении через TAB*/
+.result-button:focus {
   border-color: #68A2CA;
-  transition-duration: 0.5s;
-}
-
-.result-button-inner {
-  width: 16px;
-  height: 14px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .result-button-current {
@@ -858,9 +964,28 @@ body {
   grid-row: 4 / 5;
 }
 
-.star-list {
+.stars-list {
+  display: flex;
+  align-items: center;
   grid-column: 1 / 2;
   grid-row: 5 / 6;
+}
+
+.stars-item {
+  display: block;
+  width: 18px;
+  height: 17px;
+  background-image: url(../images/catalog/rate_star.svg);
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.amaras-rate>.stars-item:nth-child(-n+4),
+.villas-rate>.stars-item:nth-child(-n+4),
+.deserts-rate>.stars-item:nth-child(-n+3),
+.greentrees-rate>.stars-item:nth-child(-n+2)
+ {
+  opacity: 1;
 }
 
 .product-card-rate {
@@ -870,6 +995,7 @@ body {
   padding: 9px 22px 8px 23px;
   background-color: #F2F2F2;
   border-radius: 4px;
+  margin: 0;
   grid-column: 2 / 3;
   grid-row: 5 / 6;
 }
@@ -891,16 +1017,7 @@ body {
   background-color: #82B3D3;
   padding: 12px 0;
   border-radius: 4px;
-}
-
-.pagination-link:hover,
-.pagination-link:focus {
-  background-color: #68A2CA;
-  transition-duration: 0.5s;
-}
-
-.pagination-link:active {
-  color: rgba(255, 255, 255, 0.3);
+  transition:  background-color 0.5s;;
 }
 
 .pagination-current {
@@ -913,47 +1030,44 @@ body {
   color: #000;
 }
 
-/*решения описанные ниже работают, но занимают много строчек кода. Есть ли методы исключения действия правил hover/focus?*/
-.pagination-current:hover,
-.pagination-current:focus,
-.pagination-current:active {
-  color: #000;
-  background-color: #F2F2F2;
-  cursor: default;
+.pagination-link[href]:hover,
+.pagination-link[href]:focus {
+  background-color: #68A2CA;
 }
 
-.pagination-link-more:hover,
-.pagination-link-more:focus,
-.pagination-link-more:active {
-  background-color: transparent;
-  color: #000;
-  cursor: default;
+.pagination-link[href]:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /*=======================FOOTER*/
 
-.footer { /*не работает flex*/
-  padding-top: 40px;
-  padding-bottom: 30px;
+.footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.contact-tel,
-.academy-logo path,
-.social-link path {
-  transition-duration: 0.5s;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .social-list {
   display: flex;
 }
 
+.social-item:not(.social-item:last-child) {
+  margin-right: 20px;
+}
+
 .social-link {
-  display: block;
-  width: 24px;
-  height: 17px;
+  width: 25px;
+  height: 18px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link path,
+.academy-logo path {
+  transition: 0.5s;
 }
 
 .social-link:hover path,
@@ -971,6 +1085,8 @@ body {
   line-height: 1;
   text-decoration: none;
   color: #000000;
+  margin-left: 248px;
+  transition: color 0.5s;
 }
 
 .contact-tel:hover,
@@ -981,6 +1097,10 @@ body {
 .contact-tel:active {
   color: #756157;
   opacity: 30%;
+}
+
+.academy-logo {
+  margin-left: auto;
 }
 
 .academy-logo:hover path,
