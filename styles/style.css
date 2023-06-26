@@ -588,20 +588,18 @@ main {
   line-height: 1.28;
 }
 
-.filter-checkbox,
-.filter-radio {
-  display: none;
-}
-
-.checkbox-design {
+.filter-checkbox {
   width: 20px;
   height: 20px;
   border-radius: 4px;
   background-color: #fff;
   position: relative;
+  -webkit-appearance: none;
+  margin: 0;
+  cursor: pointer;
 }
 
-.checkbox-design::before {
+.filter-checkbox::before {
   content: "";
   display: block;
   width: 13px;
@@ -614,15 +612,17 @@ main {
   opacity: 0;
 }
 
-.radio-design {
+.filter-radio {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: #fff;
   position: relative;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.radio-design::before {
+.filter-radio::before {
   content: "";
   display: block;
   width: 10px;
@@ -637,12 +637,12 @@ main {
 }
 
 .checkbox-design:hover,
-.radio-design:hover {
+.filter-radio:hover {
   cursor: pointer;
 }
 
-.filter-checkbox:checked + .checkbox-design::before,
-.filter-radio:checked + .radio-design::before {
+.filter-checkbox:checked.filter-checkbox::before,
+.filter-radio:checked.filter-radio::before {
   opacity: 1;
 }
 
@@ -651,18 +651,19 @@ main {
   margin-bottom: 36px;
 }
 
-.price {
+/*.price {
   width: 143px;
   padding: 9px 20px;
   background-color: #F2F2F2;
   position: relative;
   transition: background-color 0.5s;
   border: 3px solid transparent;
-}
+}*/
 
 .price-numbers {
+  width: 143px;
+  padding: 12px 20px;
   font-family: "PT Sans", "Arial", sans-serif;
-  padding: 0 25px 0 0;
   font-size: 18px;
   line-height: 1.34;
   font-weight: 700;
@@ -672,26 +673,35 @@ main {
   transition: background-color 0.5s;
 }
 
+.price-numbers-min {
+  position: relative;
+  border-radius: 4px 0 0 4px;
+  margin-right: 2px;
+}
+
+.price-numbers-max {
+  border-radius: 0 4px 4px 0;
+}
+
+.price-numbers-min::before { /*не работает*/
+  content: "от";
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 .price:hover,
 .price:hover .price-numbers {
   background-color: #E6E6E6;
 }
 
-.price-numbers-min:focus .price-min { /*не работает*/
+.price-numbers-min:focus .price-min {
   border-color: #83B3D3;
 }
 
-.price-numbers-max:focus .price-max { /*не работает*/
+.price-numbers-max:focus .price-max {
   border-color: #83B3D3;
-}
-
-.price-min {
-  border-radius: 4px 0 0 4px;
-  margin-right: 2px;
-}
-
-.price-max {
-  border-radius: 0 4px 4px 0;
 }
 
 .price-numbers::-webkit-outer-spin-button,
@@ -702,16 +712,6 @@ main {
 
 .price-numbers[type="number"] {
   -moz-appearance: textfield;
-}
-
-.price-text-max,
-.price-text-min {
-  position: absolute;
-  color: #000000;
-  opacity: 30%;
-  right: 20px;
-  bottom: 50%;
-  transform: translateY(50%);
 }
 
 .price-slider {
@@ -742,7 +742,7 @@ main {
   background: none;
 }
 
-.price-slider-input input::-webkit-slider-thumb { /*левый рычажлк не прижимается, хотя value=0*/
+.price-slider-input input::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
@@ -769,9 +769,7 @@ main {
 
 .filter-button-reset {
   background-color: transparent;
-  border: 3px solid transparent;
   border-radius: 4px;
-  padding: 5px;
   margin-bottom: 0;
   margin-top: 0;
   transition: color 0.5s;
@@ -782,7 +780,7 @@ main {
 }
 
 .filter-button-reset:focus {
-  border-color: #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .filter-button-reset:active {
@@ -1037,6 +1035,14 @@ main {
 
 .pagination-link[href]:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-catalog .subscribe-title {
+  color: #000;
+}
+
+.subscribe-catalog .subscribe-text {
+  color: #333;
 }
 
 /*=======================FOOTER*/
