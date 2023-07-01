@@ -67,19 +67,19 @@
                 <legend class="filter-title">Инфраструктура:</legend>
                 <ul class="filter-list list-style">
                   <li class="filter-item">
-                    <label class="filter-facilities-item" tabindex="0">
+                    <label class="filter-facilities-item">
                       <input class="filter-checkbox" type="checkbox" name="facilities-pool" checked>
                       <span class="radio-check-text">Бассейн</span>
                     </label>
                   </li>
                   <li class="filter-item">
-                    <label class="filter-facilities-item" tabindex="0">
+                    <label class="filter-facilities-item">
                       <input class="filter-checkbox" type="checkbox" name="facilities-parking" checked>
                       <span class="radio-check-text">Парковка</span>
                     </label>
                   </li>
                   <li class="filter-item">
-                    <label class="filter-facilities-item" tabindex="0">
+                    <label class="filter-facilities-item">
                       <input class="filter-checkbox" type="checkbox" name="facilities-wifi">
                       <span class="radio-check-text">Wi-Fi</span>
                     </label>
@@ -117,18 +117,18 @@
                   <label class="price price-min">
                     <input class="price-numbers price-numbers-min" type="number" min="0" max="12000" value="0"
                       step="100" name="start-price-number">
+                    <span>от</span>
                   </label>
                   <label class="price price-max">
                     <input class="price-numbers price-numbers-max" type="number" min="0" max="12000" value="9000"
                       step="100" name="end-price-number">
+                    <span>до</span>
                   </label>
                 </div>
                 <div class="price-slider">
                   <div class="price-slider-progress"></div>
-                </div>
-                <div class="price-slider-input">
-                  <input type="range" class="slider-min" min="0" max="11750" value="0" name="price-slider-start">
-                  <input type="range" class="slider-max" min="0" max="11750" value="9000" name="price-slider-end">
+                  <button class="price-slider-min"></button>
+                  <button class="price-slider-max"></button>
                 </div>
               </fieldset>
               <fieldset class="filter-group filter-group-buttons">
@@ -170,16 +170,18 @@
                   <img class="product-card-img" src="images/catalog/hotel_amara.jpg"
                     alt="Звёздное небо, которое видно через скальный выступ" width="300" height="212">
                 </a>
-                <a class="product-card-link product-card-header" href="#">
-                  <h2 class="product-card-title sedona-subtitle">Amara Resot & Spa</h2>
-                </a>
+                <h2 class="product-card-title sedona-subtitle">
+                  <a class="product-card-link" href="#">
+                    Amara Resot & Spa
+                  </a>
+                </h2>
                 <div class="product-price-wrapper">
                   <p class="sedona-text sedona-text-card">Гостиница</p>
                   <p class="sedona-text">От 4000 ₽</p>
                 </div>
                 <a class="button button-brown more-button" href="#">Подробнее</a>
                 <button class="button button-blue favorite-button">В избранное</button>
-                <ul class="stars-list amaras-rate list-style" aria-label="Рейтинг гостиницы">
+                <ul class="stars-list four-rate list-style" aria-label="Рейтинг гостиницы">
                   <li class="stars-item"></li>
                   <li class="stars-item"></li>
                   <li class="stars-item"></li>
@@ -198,8 +200,11 @@
                     alt="Тёмное грозовое небо, радуга после дождя, горный пейзаж в проблесках солнечных лучей"
                     width="300" height="212">
                 </a>
-                <a class="product-card-link product-card-header" href="#">
-                  <h2 class="product-card-title sedona-subtitle">Villas at Poco Diablo</h2>
+                <h2 class="product-card-title sedona-subtitle">
+                  <a class="product-card-link" href="#">
+                    Villas at Poco Diablo
+                  </a>
+                </h2>
                 </a>
                 <div class="product-price-wrapper">
                   <p class="sedona-text sedona-text-card">Гостиница</p>
@@ -207,7 +212,7 @@
                 </div>
                 <a class="button button-brown more-button" href="#">Подробнее</a>
                 <button class="button button-blue favorite-button favorite-button-current">В избранном</button>
-                <ul class="stars-list villas-rate list-style" aria-label="Рейтинг гостиницы">
+                <ul class="stars-list four-rate list-style" aria-label="Рейтинг гостиницы">
                   <li class="stars-item"></li>
                   <li class="stars-item"></li>
                   <li class="stars-item"></li>
@@ -226,16 +231,18 @@
                     alt="горный массив красного оттенка, покрытые редкими деревьями, светит солнце" width="300"
                     height="212">
                 </a>
-                <a class="product-card-link product-card-header" href="#">
-                  <h2 class="product-card-title sedona-subtitle">Desert Quail Inn</h2>
-                </a>
+                <h2 class="product-card-title sedona-subtitle">
+                  <a class="product-card-link" href="#">
+                    Desert Quail Inn
+                  </a>
+                </h2>
                 <div class="product-price-wrapper">
                   <p class="sedona-text sedona-text-card">Гостиница</p>
                   <p class="sedona-text">От 2500 ₽</p>
                 </div>
                 <a class="button button-brown more-button" href="#">Подробнее</a>
                 <button class="button button-blue favorite-button">В избранное</button>
-                <ul class="stars-list deserts-rate list-style" aria-label="Рейтинг гостиницы">
+                <ul class="stars-list three-rate list-style" aria-label="Рейтинг гостиницы">
                   <li class="stars-item"></li>
                   <li class="stars-item"></li>
                   <li class="stars-item"></li>
@@ -253,16 +260,18 @@
                   <img class="product-card-img" src="images/catalog/hotel-greentree.jpg"
                     alt="Скалы на фоне звёздного неба" width="300" height="212">
                 </a>
-                <a class="product-card-link product-card-header" href="#">
-                  <h2 class="product-card-title sedona-subtitle">GreenTree Inn</h2>
-                </a>
+                <h2 class="product-card-title sedona-subtitle">
+                  <a class="product-card-link" href="#">
+                    GreenTree Inn
+                  </a>
+                </h2>
                 <div class="product-price-wrapper">
                   <p class="sedona-text sedona-text-card">Гостиница</p>
                   <p class="sedona-text">От 1500 ₽</p>
                 </div>
                 <a class="button button-brown more-button" href="#">Подробнее</a>
                 <button class="button button-blue favorite-button">В избранное</button>
-                <ul class="stars-list greentrees-rate list-style" aria-label="Рейтинг гостиницы">
+                <ul class="stars-list two-rate list-style" aria-label="Рейтинг гостиницы">
                   <li class="stars-item"></li>
                   <li class="stars-item"></li>
                   <li class="stars-item"></li>
