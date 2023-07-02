@@ -1322,7 +1322,6 @@ main {
 .modal-number {
   width: 110px;
   padding: 12px 10px;
-  margin-left: 46px;
   text-align: center;
   position: relative;
 }
@@ -1330,17 +1329,61 @@ main {
 .modal-number::-webkit-inner-spin-button,
 .modal-number::-webkit-outer-spin-button {
   position: absolute;
+  height: 100%;
+  transform: rotate(90deg) scale(3);
+  opacity: 0;
+  left: 48px;
+  top: 0;
+  z-index: 3;
 }
 
-.modal-text-childs + .modal-number {
-  margin-left: 82px;
-}
-
-.modal-text-childs {
+.modal-number-wrapper {
   position: relative;
 }
 
-.modal-text-childs::before {
+.modal-number-wrapper::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/modal/minus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 13px;
+  z-index: 2;
+}
+
+.modal-number-wrapper::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/modal/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 13px;
+  z-index: 2;
+}
+
+.visitors-wrapper .modal-text {
+  margin-right: 46px;
+}
+
+.visitors-wrapper .modal-text-info {
+  margin-right: 82px;
+}
+
+.modal-text-info {
+  position: relative;
+}
+
+.modal-text-info::before {
   content: "";
   position: absolute;
   right: -50px;
@@ -1353,7 +1396,7 @@ main {
   background-color: #82B3D3;
 }
 
-.modal-text-childs::after {
+.modal-text-info::after {
   content: "";
   position: absolute;
   right: -27px;

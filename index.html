@@ -218,15 +218,22 @@
         <div class="modal-row">
           <div class="visitors-wrapper">
             <label class="modal-text" for="adults">Взрослые:</label>
-            <input class="modal-input modal-number" name="adults" class="modal-numbers" type="number" value="2" min="1">
+            <div class="modal-number-wrapper">
+              <input class="modal-input modal-number" name="adults" class="modal-numbers" type="number" value="2"
+                min="1">
+            </div>
           </div>
           <div class="visitors-wrapper">
-            <label class="modal-text modal-text-childs" for="childs">Дети:</label>
-            <input class="modal-input modal-number" name="childs" class="modal-numbers" type="number" value="2" min="1">
+            <label class="modal-text modal-text-info" for="childs">Дети:</label>
+            <div class="modal-number-wrapper">
+              <input class="modal-input modal-number" name="childs" class="modal-numbers" type="number" value="2"
+                min="1">
+            </div>
           </div>
         </div>
         <input class="button button-blue button-modal" type="submit" value="Найти">
-      </form>
+    </div>
+    </form>
     </div>
   </body>
 
