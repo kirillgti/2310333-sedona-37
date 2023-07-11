@@ -212,7 +212,7 @@
             <div class="modal-row">
               <label class="modal-text" for="arrival-date" aria-label="Дата заезда">Дата Заезда:</label>
               <div class="modal-date-wrapper">
-                <input class="modal-input modal-date" name="arrival-date" type="text" value="27 апреля 2020"
+                <input class="modal-input modal-date" id="arrival-date" type="text" value="27 апреля 2020"
                   placeholder="Укажите дату" required>
                 <p class="date-message date-message-error">Мы не можем отправить вас в прошлое.</p>
               </div>
@@ -220,7 +220,7 @@
             <div class="modal-row">
               <label class="modal-text" for="departure-date">Дата Выезда:</label>
               <div class="modal-date-wrapper">
-                <input class="modal-input modal-date" name="departure-date" type="text" value="1 сентября 2023"
+                <input class="modal-input modal-date" id="departure-date" type="text" value="1 сентября 2023"
                   placeholder="Укажите дату" required>
                 <p class="date-message">На эти даты есть свободные номера. Пока есть.</p>
               </div>
@@ -232,8 +232,7 @@
                   <button class="count-button count-button-minus" type="button">
                     <span class="visually-hidden">Уменьшить количество взрослых посетителей.</span>
                   </button>
-                  <input class="count-input" name="adults" class="modal-numbers" type="number" value="2" min="1"
-                    max="10" required>
+                  <input class="count-input" id="adults" type="number" value="2" min="1" max="10" required>
                   <button class="count-button count-button-plus" type="button">
                     <span class="visually-hidden">Увеличить количество взрослых посетителей.</span>
                   </button>
@@ -250,13 +249,10 @@
                 <div class="modal-spinner">
                   <button class="count-button count-button-minus" type="button">
                     <span class="visually-hidden">Уменьшить количество детей посетителей.</span>
-                    <div class="count-button-inner count-button-inner-minus"></div>
                   </button>
-                  <input class="count-input" name="childs" class="modal-numbers" type="number" value="2" min="1"
-                    max="10" required>
+                  <input class="count-input" id="childs" type="number" value="2" min="1" max="10" required>
                   <button class="count-button count-button-plus" type="button">
                     <span class="visually-hidden">Увеличить количество детей посетителей.</span>
-                    <div class="count-button-inner count-button-inner-plus"></div>
                   </button>
                 </div>
               </div>
@@ -264,7 +260,6 @@
             <input class="button button-blue button-modal" type="submit" value="Найти">
           </form>
           <button class="modal-close-button" aria-label="Закрыть." type="button">
-            <div class="close-button-inner"></div>
           </button>
         </div>
       </div>
