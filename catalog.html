@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico">
     <link type="image/png" sizes="32x32" rel="icon" href="images/favicon.png">
     <title>Каталог гостиниц</title>
   </head>
 
   <body>
     <div class="page-wrapper">
-      <header class="main-header section-padding">
+      <header class="main-header section-padding" data-test="header">
         <nav class="main-header-nav">
           <a class="sedona-logo-link" href="index.html">
             <img class="sedona-logo" width="140" height="70" src="images/header/logo_sedona.svg" alt="логотип Седона.">
@@ -19,13 +20,19 @@
           <div class="nav-wrapper">
             <ul class="nav-list list-style">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Главная</a>
+                <a class="nav-link" href="index.html">
+                  <span class="nav-link-inner">Главная</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">О Седоне</a>
+                <a class="nav-link" href="#">
+                  <span class="nav-link-inner">О Седоне</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nav-link-current" href="catalog.html">Гостиницы</a>
+                <a class="nav-link" href="catalog.html">
+                  <span class="nav-link-inner  nav-link-inner-current">Гостиницы</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -49,7 +56,7 @@
           </ul>
         </div>
       </header>
-      <main>
+      <main data-test="main">
         <section class="hotels section-padding">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs list-style">
@@ -62,7 +69,7 @@
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
-          <form class="filter" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="filter" action="https://echo.htmlacademy.ru/" method="post" data-test="filter">
             <h2 class="visually-hidden">Фильтр по гостиницам.</h2>
             <div class="filter-group-wrapper">
               <fieldset class="filter-group filter-group-facilities">
@@ -128,7 +135,6 @@
                   </label>
                 </div>
                 <div class="price-slider">
-                  <div class="price-slider-progress"></div>
                   <button class="price-slider-min" type="button"></button>
                   <button class="price-slider-max" type="button"></button>
                 </div>
@@ -141,13 +147,14 @@
             </div>
           </form>
         </section>
-        <section class="result section-padding">
+        <section class="result section-padding" data-test="catalog">
           <header class="result-header">
             <h2 class="visually-hidden">Результаты поиска.</h2>
             <p class="result-title">Найдено гостиниц: <span>38</span></p>
             <div class="result-wrapper">
               <div class="result-text-container">
-                <select class="result-text-button sedona-text" name="result-filter" aria-label="Сортировка" id="">
+                <select class="result-text-button sedona-text" name="result-filter" aria-label="Сортировка" id=""
+                  disabled>
                   <option value="cheap">Сначала дешевые</option>
                   <option value="expensive">Сначала дорогие</option>
                 </select>
@@ -308,7 +315,7 @@
             </li>
           </ol>
         </section>
-        <section class="subscribe subscribe-catalog section-padding">
+        <section class="subscribe subscribe-catalog section-padding" data-test="subscribe">
           <header class="section-header">
             <h2 class="visually-hidden">Подписка на рассылку новостей.</h2>
             <h3 class="section-header-title subscribe-title">Подпишитесь на рассылку</h3>
@@ -317,12 +324,12 @@
             </p>
           </header>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-field" type="text" placeholder="Ваш e-mail">
+            <input class="subscribe-field" type="text" placeholder="Ваш e-mail" required>
             <input class="button button-blue subscribe-button" type="submit" value="Подписаться">
           </form>
         </section>
       </main>
-      <footer class="footer section-padding">
+      <footer class="footer section-padding" data-test="footer">
         <ul class="social-list list-style">
           <li class="social-item">
             <a class="social-link social-vkontakte" href="https://vk.com/htmlacademy">

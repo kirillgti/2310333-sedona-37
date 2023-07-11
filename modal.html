@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico">
     <link type="image/png" sizes="32x32" rel="icon" href="images/favicon.png">
     <title>Туристический городок Sedona</title>
   </head>
@@ -38,7 +39,9 @@
             <li class="user-item">
               <a class="user-link user-favorite" href="#">
                 <span class="visually-hidden">Избранное.</span>
-                <span class="favorite-count">12</span>
+                <span class="favorite-count-wrapper">
+                  <span class="favorite-count">12</span>
+                </span>
               </a>
             </li>
             <li class="user-item">
@@ -202,45 +205,57 @@
           </svg>
         </a>
       </footer>
-      <div class="modal-container">
+      <div class="modal-container" data-test="modal">
         <div class="modal-window">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="modal-row">
-              <label class="modal-text" for="arrival-date">Дата Заезда:</label>
-              <input class="modal-input modal-date" name="arrival-date" type="text" value="27 апреля 2020">
-              <span class="date-message date-message-error">Мы не можем отправить вас в прошлое.</span>
+              <label class="modal-text" for="arrival-date" aria-label="Дата заезда">Дата Заезда:</label>
+              <div class="modal-date-wrapper">
+                <input class="modal-input modal-date" name="arrival-date" type="text" value="27 апреля 2020"
+                  placeholder="Укажите дату" required>
+                <p class="date-message date-message-error">Мы не можем отправить вас в прошлое.</p>
+              </div>
             </div>
             <div class="modal-row">
               <label class="modal-text" for="departure-date">Дата Выезда:</label>
-              <input class="modal-input modal-date" name="departure-date" type="text" value="1 сентября 2023">
-              <span class="date-message">На эти даты есть свободные номера. Пока есть.</span>
+              <div class="modal-date-wrapper">
+                <input class="modal-input modal-date" name="departure-date" type="text" value="1 сентября 2023"
+                  placeholder="Укажите дату" required>
+                <p class="date-message">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
             </div>
             <div class="modal-row">
               <div class="visitors-wrapper">
                 <label class="modal-text" for="adults">Взрослые:</label>
                 <div class="modal-spinner">
                   <button class="count-button count-button-minus" type="button">
-                    <div class="count-button-inner count-button-inner-minus"></div>
+                    <span class="visually-hidden">Уменьшить количество взрослых посетителей.</span>
                   </button>
-                  <input class="count-input" name="adults" class="modal-numbers" type="number" value="2" min="1">
+                  <input class="count-input" name="adults" class="modal-numbers" type="number" value="2" min="1"
+                    max="10" required>
                   <button class="count-button count-button-plus" type="button">
-                    <div class="count-button-inner count-button-inner-plus"></div>
+                    <span class="visually-hidden">Увеличить количество взрослых посетителей.</span>
                   </button>
                 </div>
               </div>
               <div class="visitors-wrapper visitors-wrapper-childs">
                 <label class="modal-text" for="childs">Дети:</label>
-                <span class="modal-info" tabindex="0"></span>
-                <p class="modal-info-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
-                  лет.
-                  Дети до 6 лет размещаются бесплатно.</p>
+                <span class="modal-info" tabindex="0">
+                  <span class="modal-info-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до
+                    18
+                    лет.
+                    Дети до 6 лет размещаются бесплатно.</span>
+                </span>
                 <div class="modal-spinner">
                   <button class="count-button count-button-minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество детей посетителей.</span>
                     <div class="count-button-inner count-button-inner-minus"></div>
                   </button>
-                  <input class="count-input" name="childs" class="modal-numbers" type="number" value="2" min="1">
+                  <input class="count-input" name="childs" class="modal-numbers" type="number" value="2" min="1"
+                    max="10" required>
                   <button class="count-button count-button-plus" type="button">
+                    <span class="visually-hidden">Увеличить количество детей посетителей.</span>
                     <div class="count-button-inner count-button-inner-plus"></div>
                   </button>
                 </div>
@@ -248,9 +263,9 @@
             </div>
             <input class="button button-blue button-modal" type="submit" value="Найти">
           </form>
-          <a href="index.html" class="modal-close-button" aria-label="Закрыть.">
+          <button class="modal-close-button" aria-label="Закрыть." type="button">
             <div class="close-button-inner"></div>
-          </a>
+          </button>
         </div>
       </div>
     </div>
