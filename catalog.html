@@ -135,8 +135,12 @@
                   </label>
                 </div>
                 <div class="price-slider">
-                  <button class="price-slider-min" type="button"></button>
-                  <button class="price-slider-max" type="button"></button>
+                  <button class="price-slider-min" type="button">
+                    <span class="visually-hidden">элемент ползунка, отвечающий за минимальную цену</span>
+                  </button>
+                  <button class="price-slider-max" type="button">
+                    <span class="visually-hidden">элемент ползунка, отвечающий за максимальную цену</span>
+                  </button>
                 </div>
               </fieldset>
               <fieldset class="filter-group filter-group-buttons">
@@ -322,7 +326,8 @@
             </p>
           </header>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-field" type="text" placeholder="Ваш e-mail" required>
+            <input class="subscribe-field" id="mail-field" type="text" placeholder="Ваш e-mail" required>
+            <label class="visually-hidden" for="mail-field">Введите вашу электронную почту для рассылки</label>
             <input class="button button-blue subscribe-button" type="submit" value="Подписаться">
           </form>
         </section>
