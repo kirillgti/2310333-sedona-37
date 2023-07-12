@@ -48,10 +48,6 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-main {
-  flex-grow: 1;
-}
-
 .section-padding {
   padding-left: 70px;
   padding-right: 70px;
@@ -356,7 +352,7 @@ main {
   margin-bottom: 69px;
 }
 
-.about > .section-header .section-header-title {
+.about .section-header-title {
   margin-bottom: 26px;
 }
 
@@ -438,7 +434,7 @@ main {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.inner-blue > .about-item-inner > .sedona-subtitle::after {
+.inner-blue .sedona-subtitle::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
