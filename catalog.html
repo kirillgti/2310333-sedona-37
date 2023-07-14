@@ -31,7 +31,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="catalog.html">
-                  <span class="nav-link-inner  nav-link-inner-current">Гостиницы</span>
+                  <span class="nav-link-inner nav-link-inner-current">Гостиницы</span>
                 </a>
               </li>
             </ul>
@@ -50,10 +50,10 @@
                 </span>
               </a>
             </li>
-            <li class="user-item">
-              <a class="button button-brown header-button" href="#">Хочу сюда!</a>
-            </li>
           </ul>
+          <div class="user-button-wrapper">
+            <a class="button button-brown header-button" href="#">Хочу сюда!</a>
+          </div>
         </div>
       </header>
       <main data-test="main">
@@ -76,21 +76,21 @@
                 <legend class="filter-title">Инфраструктура:</legend>
                 <ul class="filter-list list-style">
                   <li class="filter-item">
-                    <label class="filter-facilities-item">
-                      <input class="filter-checkbox" type="checkbox" name="facilities-pool" checked>
-                      <span class="radio-check-text">Бассейн</span>
+                    <input class="filter-checkbox" id="facilities-pool" type="checkbox" checked>
+                    <label class="filter-text" for="facilities-pool">
+                      Бассейн
                     </label>
                   </li>
                   <li class="filter-item">
-                    <label class="filter-facilities-item">
-                      <input class="filter-checkbox" type="checkbox" name="facilities-parking" checked>
-                      <span class="radio-check-text">Парковка</span>
+                    <input class="filter-checkbox" id="facilities-parking" type="checkbox" checked>
+                    <label class="filter-text" for="facilities-parking">
+                      Парковка
                     </label>
                   </li>
                   <li class="filter-item">
-                    <label class="filter-facilities-item">
-                      <input class="filter-checkbox" type="checkbox" name="facilities-wifi">
-                      <span class="radio-check-text">Wi-Fi</span>
+                    <input class="filter-checkbox" id="facilities-wifi" type="checkbox" checked>
+                    <label class="filter-text" for="facilities-wifi">
+                      Wi-Fi
                     </label>
                   </li>
                 </ul>
@@ -99,21 +99,21 @@
                 <legend class="filter-title">Тип Жилья:</legend>
                 <ul class="filter-list list-style">
                   <li class="filter-item">
-                    <label class="filter-facilities-item">
-                      <input class="filter-radio" type="radio" name="housing" value="hotel" checked>
-                      <span class="radio-check-text">Гостиница</span>
+                    <input class="filter-radio" id="housing-hotel" type="radio" value="hotel" name="housing" checked>
+                    <label class="filter-text" for="housing-hotel">
+                      Гостиница
                     </label>
                   </li>
                   <li class="filter-item">
-                    <label class="filter-facilities-item">
-                      <input class="filter-radio" type="radio" name="housing" value="motel">
-                      <span class="radio-check-text">Мотель</span>
+                    <input class="filter-radio" id="housing-motel" type="radio" value="motel" name="housing">
+                    <label class="filter-text" for="housing-motel">
+                      Мотель
                     </label>
                   </li>
                   <li class="filter-item">
-                    <label class="filter-facilities-item">
-                      <input class="filter-radio" type="radio" name="housing" value="apart">
-                      <span class="radio-check-text">Апартаменты</span>
+                    <input class="filter-radio" id="housing-aparts" type="radio" value="aparts" name="housing">
+                    <label class="filter-text" for="housing-aparts">
+                      Апартаменты
                     </label>
                   </li>
                 </ul>
@@ -182,11 +182,11 @@
                   <img class="product-card-img" src="images/catalog/hotel_amara.jpg"
                     alt="Звёздное небо, которое видно через скальный выступ" width="300" height="212">
                 </a>
-                <h2 class="product-card-title sedona-subtitle">
+                <h3 class="product-card-title sedona-subtitle">
                   <a class="product-card-link" href="#">
                     Amara Resort & Spa
                   </a>
-                </h2>
+                </h3>
                 <div class="product-price-wrapper">
                   <p class="sedona-text sedona-text-card">Гостиница</p>
                   <p class="sedona-text">От 4000 ₽</p>
@@ -212,11 +212,11 @@
                     alt="Тёмное грозовое небо, радуга после дождя, горный пейзаж в проблесках солнечных лучей"
                     width="300" height="212">
                 </a>
-                <h2 class="product-card-title sedona-subtitle">
+                <h3 class="product-card-title sedona-subtitle">
                   <a class="product-card-link" href="#">
                     Villas at Poco Diablo
                   </a>
-                </h2>
+                </h3>
                 <div class="product-price-wrapper">
                   <p class="sedona-text sedona-text-card">Гостиница</p>
                   <p class="sedona-text">От 5000 ₽</p>
@@ -243,11 +243,11 @@
                     alt="горный массив красного оттенка, покрытые редкими деревьями, светит солнце" width="300"
                     height="212">
                 </a>
-                <h2 class="product-card-title sedona-subtitle">
+                <h3 class="product-card-title sedona-subtitle">
                   <a class="product-card-link" href="#">
                     Desert Quail Inn
                   </a>
-                </h2>
+                </h3>
                 <div class="product-price-wrapper">
                   <p class="sedona-text sedona-text-card">Гостиница</p>
                   <p class="sedona-text">От 2500 ₽</p>
@@ -272,11 +272,11 @@
                   <img class="product-card-img" src="images/catalog/hotel_greentree.jpg"
                     alt="Скалы на фоне звёздного неба" width="300" height="212">
                 </a>
-                <h2 class="product-card-title sedona-subtitle">
+                <h3 class="product-card-title sedona-subtitle">
                   <a class="product-card-link" href="#">
                     GreenTree Inn
                   </a>
-                </h2>
+                </h3>
                 <div class="product-price-wrapper">
                   <p class="sedona-text sedona-text-card">Гостиница</p>
                   <p class="sedona-text">От 1500 ₽</p>
@@ -336,8 +336,8 @@
         <ul class="social-list list-style">
           <li class="social-item">
             <a class="social-link social-vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте.</span>
-              <svg class="social-img" xmlns="http://www.w3.org/2000/svg" width="25" height="14" fill="none">
+              <svg class="social-img" xmlns="http://www.w3.org/2000/svg" width="25" height="14" fill="none" role="img"
+                aria-label="Вконтакте.">
                 <path fill="#83B3D3" fill-rule="evenodd"
                   d="M23.95.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74V.95c0-.66-.19-.95-.74-.95H9.65c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H1.4C.65 0 .5.35.5.73c0 .68.89 4.07 4.14 8.55C6.81 12.34 9.87 14 12.65 14c1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.68-.88.4 0 1.06.2 2.62 1.67C19.61 13.22 19.9 14 20.9 14h2.63c.75 0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.22-3.02-.6-.7-1.53-1.47-1.8-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z"
                   clip-rule="evenodd" />
@@ -346,8 +346,8 @@
           </li>
           <li class="social-item">
             <a class="social-link social-telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграм.</span>
-              <svg class="social-img" xmlns="http://www.w3.org/2000/svg" width="19" height="16" fill="none">
+              <svg class="social-img" xmlns="http://www.w3.org/2000/svg" width="19" height="16" fill="none" role="img"
+                aria-label="Телеграм.">
                 <path fill="#83B3D3"
                   d="M17.29.1 1.34 6.25c-1.09.43-1.08 1.04-.2 1.31l4.1 1.28 9.47-5.98c.44-.27.85-.12.52.18L7.55 9.96l-.28 4.22c.41 0 .6-.19.83-.41l1.99-1.93 4.13 3.05c.77.42 1.31.2 1.5-.7l2.72-12.8C18.72.27 18-.23 17.29.09Z" />
               </svg>
@@ -355,8 +355,8 @@
           </li>
           <li class="social-item">
             <a class="social-link social-youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютьюб.</span>
-              <svg class="social-img" xmlns="http://www.w3.org/2000/svg" width="23" height="18" fill="none">
+              <svg class="social-img" xmlns="http://www.w3.org/2000/svg" width="23" height="18" fill="none" role="img"
+                aria-label="Ютьюб.">
                 <path fill="#83B3D3"
                   d="M19.1.5H3.68C1.81.5.5 2.1.5 3.9V14c0 1.9 1.31 3.5 3.17 3.5h15.66c1.64 0 3.17-1.6 3.17-3.4V3.9C22.28 2.1 20.97.5 19.1.5ZM8.17 13.04V4.96L15.5 9l-7.34 4.04Z" />
               </svg>
@@ -368,8 +368,8 @@
           +7 (812) 812-12-12
         </a>
         <a class="academy-logo-link" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Логотип компании HTML-Academy.</span>
-          <svg class="academy-logo-image" xmlns="http://www.w3.org/2000/svg" width="115" height="33" fill="none">
+          <svg class="academy-logo-image" xmlns="http://www.w3.org/2000/svg" width="115" height="33" fill="none"
+            role="img" aria-label="Логотип компании HTML-Academy.">
             <path fill="#000" fill-rule="evenodd"
               d="M8 6.2c.8-1 2-1.7 3.6-1.7 2.7 0 4.6 1.9 4.5 4.9v6.1h-2V9.8c0-1.8-1.1-3.2-2.9-3.2-2 0-3.3 1.5-3.3 3.6v5.3h-2V0h2v6.2H8Zm-8 9.3v-2.6h2.5v2.6H0ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2Zm11 1.9a3.7 3.7 0 0 1 3.5-2.1c2.5 0 4 1.8 3.9 4.3v6.5h-2V9.1c0-1.6-.9-2.6-2.4-2.6-1.2 0-2.6.9-2.6 3.3v5.6h-2V9.1c0-1.6-.9-2.6-2.4-2.6C32 6.5 31 8 31 10v5.4h-2V4.8h1.9v1.6h.1c.6-1 1.7-1.8 3.1-1.8 1.6 0 2.8.9 3.4 2.1h.1Zm10.2 6c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM25 17.9c1.7 0 3 .7 3.9 1.8v-1.5h2v10.6h-2v-1.6h-.1c-.8 1.1-2 1.9-3.8 1.9-3.1 0-5.4-2.3-5.4-5.6s2.3-5.6 5.4-5.6Zm-3.3 5.6c0 2 1.4 3.6 3.6 3.6s3.6-1.7 3.6-3.6c0-2-1.4-3.6-3.6-3.6a3.5 3.5 0 0 0-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3 3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6 1.6 0 2.8 1 3.3 2.2h2.1V22Zm7-4.1c1.7 0 3 .7 3.9 1.8v-1.5h2v10.6h-2v-1.6H55c-.8 1.1-2 1.9-3.8 1.9-3.1 0-5.4-2.3-5.4-5.6s2.3-5.6 5.4-5.6Zm-3.3 5.6c0 2 1.4 3.6 3.6 3.6 2.1 0 3.6-1.7 3.6-3.6 0-2-1.4-3.6-3.6-3.6a3.5 3.5 0 0 0-3.6 3.6Zm20.8-3.7a5 5 0 0 0-3.9-1.9c-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm7.7-3.6c0-3.1 2.2-5.6 5.5-5.6 3.5 0 5.7 2.7 5.5 6.3H75c.1 1.6 1.5 2.9 3.4 2.9 1.4 0 2.5-.6 3-1.6h2.1c-.7 2.3-2.7 3.6-5.2 3.6-3.4 0-5.5-2.6-5.5-5.6Zm8.8-1.1c-.3-1.6-1.6-2.6-3.3-2.6a3.2 3.2 0 0 0-3.2 2.6h6.5Zm16.6-4.5a4 4 0 0 0-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm7.6.2 3.6 8.9 3.4-8.9h2.1l-4.7 12.2c-.7 1.8-1.7 2.6-3.5 2.6h-2.5v-2h2.5c1 0 1.4-.3 1.7-1.2l-4.8-11.6h2.2Z"
               clip-rule="evenodd" />

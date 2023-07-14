@@ -9,8 +9,8 @@
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
-  url("../fonts/PTSans-Regular.woff") format("woff");
+  src: url("../fonts/ptsans-regular.woff2") format("woff2"),
+  url("../fonts/ptsans-regular.woff") format("woff");
 }
 
 @font-face {
@@ -18,8 +18,8 @@
   font-style: normal;
   font-weight: bold;
   font-display: swap;
-  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
-  url("../fonts/PTSans-Bold.woff") format("woff");
+  src: url("../fonts/ptsans-bld.woff2") format("woff2"),
+  url("../fonts/ptsans-bold.woff") format("woff");
 }
 
 html,body {
@@ -167,6 +167,8 @@ body {
 }
 
 .sedona-logo {
+  width: 140px;
+  height: 70px;
   display: block;
   position: absolute;
 }
@@ -177,6 +179,7 @@ body {
 
 .nav-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-link {
@@ -211,19 +214,18 @@ body {
 }
 
 .user-wrapper {
+  /*min-width: 268px;*/
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
 .user-list {
+  max-width: 88px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
-
-.user-item:last-child {
-  margin-left: 22px;
-}
-
 
 .user-link {
   display: block;
@@ -231,7 +233,7 @@ body {
   width: 18px;
   height: 18px;
   transition: opacity 0.5s;
-  padding: 23px 12px;
+  padding: 23px 13px;
 }
 
 .user-link:hover {
@@ -279,8 +281,17 @@ body {
   text-decoration: none;
 }
 
+.user-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 20px 0;
+  padding: 14px 0;
+}
+
 .header-button {
   width: 160px;
+  height: 36px;
   font-size: 16px;
   line-height: 1.25;
 }
@@ -299,6 +310,11 @@ body {
   text-align: center;
   position: relative;
   margin-bottom: 49px;
+}
+
+.hero-text {
+  width: 458px;
+  height: 352px;
 }
 
 .hero::after {
@@ -396,6 +412,8 @@ body {
 }
 
 .about-image {
+  width: 800px;
+  height: 385px;
   background-color: #82B3D3;
 }
 
@@ -508,7 +526,10 @@ body {
 }
 
 .subscribe-index {
+  width: 1200px;
+  min-height: 415px;
   background-image: url("../images/index/subscribe.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #90959A;
 }
@@ -528,7 +549,7 @@ body {
 
 .subscribe-form {
   display: flex;
-  width: 684px;
+  min-width: 684px;
   margin: 0 auto;
 }
 
@@ -542,6 +563,7 @@ body {
   border-radius: 4px 0 0 4px;
   background-color: #F2F2F2;
   outline: none;
+  margin-left: auto;
 }
 
 .subscribe-field::placeholder {
@@ -555,11 +577,12 @@ body {
 }
 
 .subscribe-button {
-  width: 232px;
+  min-width: 232px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 20px;
   line-height: 1.8;
   border-radius: 0 4px 4px 0;
+  margin-right: auto;
 }
 
 /*=======================CATALOG*/
@@ -568,6 +591,7 @@ body {
   width: 1200px;
   min-height: 412px;
   background-image: url("../images/catalog/catalog_background.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
   background-color: #90959A;
@@ -666,20 +690,22 @@ body {
   margin-bottom: 32px;
 }
 
+.filter-list {
+  width: 150px;
+}
+
 .filter-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 16px;
 }
 
-.filter-facilities-item {
-  display: flex;
-  align-items: center;
-  gap: 0 16px;
-}
-
-.radio-check-text {
+.filter-text {
   font-size: 18px;
   line-height: 1.28;
   transition: 0.5s;
+  overflow-x: hidden;
 }
 
 .filter-checkbox {
@@ -693,6 +719,7 @@ body {
   cursor: pointer;
   transition: opacity 0.5s;
   outline: none;
+  margin-right: 16px;
 }
 
 .filter-checkbox::before {
@@ -718,6 +745,8 @@ body {
   margin: 0;
   outline: none;
   transition: opacity 0.5s;
+  vertical-align: middle;
+  margin-right: 16px;
 }
 
 .filter-radio::before {
@@ -749,8 +778,8 @@ body {
   opacity: 0.6;
 }
 
-.filter-checkbox:hover + span:not(.filter-checkbox:disabled + span),
-.filter-radio:hover + span:not(.filter-radio:disabled + span) {
+.filter-checkbox:hover + .filter-text:not(.filter-checkbox:disabled + .filter-text),
+.filter-radio:hover + .filter-text:not(.filter-radio:disabled + .filter-text) {
   opacity: 0.6;
 }
 
@@ -770,8 +799,8 @@ body {
   opacity: 0.3;
 }
 
-.filter-checkbox:active + span:not(.filter-checkbox:disabled + span),
-.filter-radio:active + span:not(.filter-radio:disabled + span) {
+.filter-checkbox:active + .filter-text:not(.filter-checkbox:disabled + .filter-text),
+.filter-radio:active + .filter-text:not(.filter-radio:disabled + .filter-text) {
   opacity: 0.3;
 }
 
@@ -782,15 +811,15 @@ body {
   opacity: 0.5;
 }
 
-.filter-checkbox:disabled + span,
-.filter-radio:disabled + span {
+.filter-checkbox:disabled + .filter-text,
+.filter-radio:disabled + .filter-text {
   color: #E5E5E5;
   opacity: 0.5;
 }
 
 .price-numbers {
   width: 143px;
-  padding: 12px 20px;
+  padding: 12px 42px 12px 20px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 1.34;
@@ -857,7 +886,7 @@ body {
 
 .price-slider {
   position: relative;
-  width: 100%;
+  width: 288px;
   height: 4px;
   background-color: #5E676D;
 }
@@ -1112,6 +1141,7 @@ body {
 }
 
 .product-item {
+  width: 340px;
   /*border: 1px solid #E6E6E6;   /* <= в макете border оформлен криво, сложно соблюсти PP, поэтому делаем через shadow*/
   border-radius: 4px;
   padding: 20px;
@@ -1140,6 +1170,8 @@ body {
 }
 
 .product-card-img {
+  width: 300px;
+  height: 212px;
   display: block;
 }
 
@@ -1283,15 +1315,15 @@ body {
 }
 
 .social-list {
+  width: 147px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .social-item {
   box-sizing: content-box;
-  align-items: center;
-  width: 25px;
-  padding: 11px;
+  padding: 12px;
 }
 
 .social-link {
@@ -1300,6 +1332,8 @@ body {
 }
 
 .social-img {
+  width: 25px;
+  height: 18px;
   display: block;
   margin: 0 auto;
 }
@@ -1436,7 +1470,7 @@ body {
 
 .modal-date {
   width: 440px;
-  padding: 12px 20px;
+  padding: 12px 52px 12px 20px;
   background-image: url(../images/modal/calendar.svg);
   background-repeat: no-repeat;
   background-position: 404px;
