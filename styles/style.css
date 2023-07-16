@@ -178,6 +178,7 @@ body {
 }
 
 .nav-list {
+  max-width: 590px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -221,7 +222,7 @@ body {
 }
 
 .user-list {
-  max-width: 88px;
+  max-width: 176px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -695,31 +696,33 @@ body {
 }
 
 .filter-item {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 16px;
+  padding-left: 36px;
 }
 
 .filter-text {
   font-size: 18px;
   line-height: 1.28;
   transition: 0.5s;
-  overflow-x: hidden;
 }
 
 .filter-checkbox {
+  position: absolute;
+  top: 2px;
+  left: 0;
   width: 20px;
   height: 20px;
   border-radius: 4px;
   background-color: #fff;
-  position: relative;
   -webkit-appearance: none;
   margin: 0;
   cursor: pointer;
   transition: opacity 0.5s;
   outline: none;
-  margin-right: 16px;
 }
 
 .filter-checkbox::before {
@@ -730,23 +733,24 @@ body {
   position: absolute;
   background: url("../images/catalog/check.svg") no-repeat bottom;
   left: 50%;
-  top: 58%;
+  top: 57%;
   transform: translate(-50%, -50%);
   opacity: 0;
 }
 
 .filter-radio {
+  position: absolute;
+  top: 2px;
+  left: 0;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: #fff;
-  position: relative;
   -webkit-appearance: none;
   margin: 0;
   outline: none;
   transition: opacity 0.5s;
   vertical-align: middle;
-  margin-right: 16px;
 }
 
 .filter-radio::before {
